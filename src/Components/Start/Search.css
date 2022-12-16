@@ -1,0 +1,125 @@
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.start-title {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 200px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* SEARCH BAR */
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 130px;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 290px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.searchInput {
+    font-size: 20px;
+    border: none;
+    margin-left: 6px;
+    flex-grow: 1;
+}
+
+.searchInput:focus {
+    border: none;
+    outline: none;
+}
+
+.searchIcon {
+    size: 23px;
+    margin-right: 6px;
+}
+
+/* RANKING LIST */
+.rankingList {
+    list-style-type: none;
+    /* border: 1px solid red; */
+    padding-left: 0px;
+    margin: 0px;
+    overflow: scroll;
+    height: 300px;
+    font-family: 'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rankingItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 8px 0px;
+    height: 72px;
+}
+
+.rankingItem h2 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 14px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 0px;
+}
+
+.rankingItem .creator {
+    margin-left: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #929292;
+    margin-top:1px;
+}
+
+.rankingItem .cards .count {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.rankingItem .cards {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 14px;
+}
+
+.ErrorCard {
+    border-radius: 10px;
+    border: 3px solid red;
+    margin-top: 5px;
+    color: red;
+    text-align: center;
+}
+.ErrorCard h2 {
+    margin: 2px 0px;
+    text-transform: uppercase;
+}
+
+
+/* ICONS */
+.watermark {
+    color: rgb(150, 150, 150);
+}
+
+.personIcon {
+    position: absolute;
+    top: 70px;
+    left: 22px;
+}
