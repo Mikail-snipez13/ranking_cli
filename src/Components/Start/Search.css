@@ -31,6 +31,7 @@
     border: none;
     margin-left: 6px;
     flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .searchInput:focus {
@@ -62,6 +63,11 @@
     border-radius: 10px;
     margin: 8px 0px;
     height: 72px;
+}
+
+.rankingItem:hover {
+    border-color: green;
+    color: green;
 }
 
 .rankingItem h2 {

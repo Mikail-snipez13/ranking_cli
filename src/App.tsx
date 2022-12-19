@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Search from './Components/Start/Search';
+import RankingOverview from './Components/RankingOverview/RankingOverview';
+import Search, {Ranking} from './Components/Start/Search';
 
 function App() {
+
+  const [page, setPage] = useState<string>("search");
+  const [user, setUser] = useState(null);
+  const [ranking, setRanking] = useState<Ranking>();
+
   return (
     <div className="App">
-      <Search /> 
+      {page === "search" ? <Search pageSetter={setPage} rankingSetter={setRanking} /> : null}
+      {page === "ranking-overview" ? <RankingOverview pageSetter={setPage} ranking={ranking} /> : null}
     </div>
   );
 }
