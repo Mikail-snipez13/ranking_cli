@@ -6,7 +6,7 @@ import Search, {Ranking} from './Components/Start/Search';
 function App() {
 
   const [page, setPage] = useState<string>("search");
-  const [user, setUser] = useState(null);
+  const [username, setUsername] = useState(null);
   const [ranking, setRanking] = useState<Ranking>();
 
   return (

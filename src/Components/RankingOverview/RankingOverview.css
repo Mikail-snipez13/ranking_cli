@@ -3,6 +3,7 @@
     flex-direction: column;
     align-content: center;
     text-align: center;
+    
     height: 100vh;
 }
 
@@ -13,7 +14,7 @@
     font-size: 36px;
 }
 
-.rankingOverview div {
+.questionCardContainer {
     flex-grow: 1;
 }
 
@@ -79,4 +80,94 @@
 
 .deck button:hover {
     background: #35955c;
+}
+
+.questionCard h2 {
+    text-align: center !important;
+    margin-bottom: 8px;
+}
+
+.questionCardTitle {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.questionCard {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0px auto;
+    text-align: start;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.teacherInput {
+    margin: 15px 20px;
+}
+
+.teacherInput p {
+    margin: 0px 8px;
+    color: #a3a3a3
+}
+
+/* nav */
+.questionCardNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionCardNav h2 {
+    line-height: 0.7;
+    margin-left: 0px;
+    margin-right: 40px;
+}
+
+.leftArrow {
+    transform: rotate(180deg);
+}
+
+.ArrowCircle {
+    background: #92b2fb;
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.submitArrow {
+    height: 45px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: #9edcb6;
+}
+
+.submitArrow p {
+    margin: 13.5px 0px;
+}
+
+.ArrowDisabled {
+    background: #a3a3a3;
+}
+
+.ArrowRed {
+    background: #fb7777 !important;
+}
+
+/* submitted face */
+.submittedFace {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submittedFace h2 {
+    /* font-size: 30px; */
 }
