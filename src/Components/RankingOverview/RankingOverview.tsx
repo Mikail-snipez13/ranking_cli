@@ -5,6 +5,7 @@ import { Ranking } from "../Start/Search";
 import "./RankingOverview.css"
 import arrowIcon from "../../Assets/left.svg"
 import Confetti from "react-confetti";
+import zoomIcon from './../../Assets/Zoom.svg'
 
 type Props = {
     pageSetter: any;
@@ -80,7 +81,7 @@ const RankingOverview = (props: Props) => {
 
     const startHandler = () => {
         checkValidation();
-        if (isValid) {
+        if (isValid && questions.length > 0) {
             setSwipeCount(1);
         }
     }
@@ -136,10 +137,12 @@ const RankingOverview = (props: Props) => {
     }
 
     const TeacherList = teachers.map(teacher => {return {value: teacher.name, label: teacher.name}})
+    const showSearch = () =>  props.pageSetter("search");
 
     return (
         <div className="rankingOverview">
             <h1>{props.ranking ? props.ranking.title : "NO RANKING"}</h1>
+            <img className='personIcon' src={zoomIcon} height={29} onClick={showSearch} />
             {load && !submitted ?
             <div className="questionCardContainer">
                 {swipeCount > 0 ?
@@ -172,7 +175,7 @@ const RankingOverview = (props: Props) => {
                     <div style={isValid && ticket.length === 6 ? {borderColor: '#90C7A6'} : (ticket.length === 0 ? {} : {borderColor: '#d36969'})}>
                         <input type="text" placeholder="insert ticket" maxLength={6} onChange={event => setTicket(event.target.value)} />
                     </div>
-                    <button onClick={startHandler}>Start</button>
+                    <button style={questions.length > 0 ? {} : {background: "#aaaaaa"}} onClick={startHandler}>Start</button>
                 </div>
                 }
             </div>

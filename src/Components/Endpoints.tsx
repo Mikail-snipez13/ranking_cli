@@ -16,3 +16,6 @@ export const ticketSubmit = (code: string, rankingId: number) => `${getHostname(
 
 // question
 export const getQuestions = (rankingId: number) => `${getHostname()}/question/get/allFromRanking/${rankingId}`;
+
+// user
+export const getUsernameById = (userId: number) => `${getHostname()}/user/get/usernameById/${userId}`

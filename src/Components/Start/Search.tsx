@@ -3,7 +3,7 @@ import './Search.css';
 import zoomIcon from './../../Assets/Zoom.svg'
 import personIcon from './../../Assets/Person.svg'
 import { Method } from '@testing-library/react';
-import { rankingSearch } from '../Endpoints';
+import { getQuestions, getUsernameById, rankingSearch } from '../Endpoints';
 
 export interface Ranking {
     id: number;
@@ -57,8 +57,8 @@ const Search = (props: Props) => {
                     // fetch meta data for rankings
                     data.forEach((ranking: Ranking, index: number) => {
                         Promise.all([
-                            fetch(`http://localhost:8080/question/get/allFromRanking/${ranking.id}`),
-                            fetch(`http://localhost:8080/user/id/${ranking.userId}`)
+                            fetch(getQuestions(ranking.id)),
+                            fetch(getUsernameById(ranking.userId))
                         ])
                         .then(async ([quest, user]) => {
                             // console.log(quest, user);
@@ -88,6 +88,7 @@ const Search = (props: Props) => {
             await loadData()
         }
     }
+    const showLogin = () => {props.pageSetter('login')}
 
     const getQuestion = (id: number) => {return questionCounts.get(id)}
     const getName = (id: number) => {return names.get(id)}
@@ -102,9 +103,9 @@ const Search = (props: Props) => {
         getRankingView={getRankingView}
         />)
 
-    return (
+        return (
             <div className="start">
-                <img className='personIcon' src={personIcon} height={29} />
+                <img className='personIcon' src={personIcon} height={29} onClick={showLogin} />
                 <h1 className="start-title">Ranking</h1>
                 <div style={{flexGrow: 1}}>
                     <div className='searchBar'>
