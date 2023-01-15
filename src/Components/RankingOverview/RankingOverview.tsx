@@ -182,7 +182,7 @@ const RankingOverview = (props: Props) => {
             : null}   
             {submitted ? 
             <div className="submittedFace">
-                <h2>Thank you for the vote!</h2>
+                <h2>Thank you for your vote!</h2>
                 <Confetti 
                 width={window.innerWidth} 
                 height={window.innerHeight} 

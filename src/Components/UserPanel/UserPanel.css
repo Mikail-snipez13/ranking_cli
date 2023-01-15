@@ -1,0 +1,53 @@
+
+.user-panel-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+.user-panel-ranking-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1000px;
+}
+
+.user-panel-ranking-item {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 18px;
+    width: 220px;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-panel-ranking-item:hover {
+    border-color: orange;
+    color: orange;
+}
+
+.user-panel-ranking-item h2 {
+    margin: 0px;
+}
+
+.user-panel-ranking-item p {
+    margin: 0px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+    .user-panel-ranking-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+    }
+}

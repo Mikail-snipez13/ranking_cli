@@ -1,0 +1,245 @@
+.QuestionSection {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 48%;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SectionTitle {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.TicketSection {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ResultSection {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-panel-ranking {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-panel-ranking-title {
+    margin: 54px auto 30px auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.user-panel-ranking-content {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-panel-ranking-question-list {
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+.question-item-container {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 5px 25px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.question-item-container-text {
+    margin: 10px;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.question-item-container-input {
+    margin: 8px;
+    font-size: 20px;
+    height: 100px;
+    flex-grow: 1;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.option-points {
+    display: flex;
+    flex-direction: row;
+    width: 34px;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 7px;
+    align-items: center;
+    height: 30px;
+
+}
+
+.option-points > * {
+    width: 7px;
+    height: 7px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    background-color: rgb(190, 190, 190);
+    border-radius: 50%;
+}
+
+.user-panel-ranking-question-button {
+    margin: 24px 28px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 54px;
+    background-color: #90c7a6;
+}
+
+.user-panel-ranking-question-button:hover {
+    background-color: #18944a;
+    color: white;
+}
+
+.question-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question-options p {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.create-question-form {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 500px;   
+    height: 250px;
+    position: absolute;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.roboto {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ticket-stats-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticket-stats-container p {
+    margin: 0px
+}
+
+.ticket-content-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.ticket-content-container hr {
+    margin: 4px;
+}
+
+/* ticket progress bar */
+.ticket-progress-bar-background {
+    background-color: #90c7a6;
+    flex-grow: 1;
+    margin: 0px 10px;
+    height: 19px;
+    border-radius: 10px;
+}
+
+.ticket-progress-bar-foreground {
+    background-color: #fa4655;
+    height: 100%;
+    width: 10%;
+    border-radius: 10px;
+}
+
+/* ticket list */
+.user-panel-ticket-list {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.loadingIndicatorContainer {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: 30px;
+    width: 130px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.loadingIndicatorContainer div {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.loadingCircleLeft {
+    animation: leftCircleAnimation 1s linear infinite;
+}
+
+.loadingCircleMiddle {
+    animation: middleCircleAnimation 1s linear infinite;
+}
+
+.loadingCircleRight {
+    animation: rightCircleAnimation 1s linear infinite;
+}
+
+@keyframes leftCircleAnimation {
+    0% {height: 30px;width: 30px;}
+    10% {height: 40px;width: 40px;}
+    20% {height: 30px;width: 30px;}
+    100% {height: 30px;width: 30px;}
+}
+
+@keyframes middleCircleAnimation {
+    0% {height: 30px;width: 30px;}
+    40% {height: 30px;width: 30px;}
+    50% {height: 40px;width: 40px;}
+    60% {height: 30px;width: 30px;}
+    100% {height: 30px;width: 30px;}
+}
+
+@keyframes rightCircleAnimation {
+    0% {height: 30px;width: 30px;}
+    80% {height: 30px;width: 30px;}
+    90% {height: 40px;width: 40px;}
+    100% {height: 30px;width: 30px;}
+}
+
+@media screen and (max-width: 1200px) {
+    .user-panel-ranking {
+        width: 100vw;
+    }
+}

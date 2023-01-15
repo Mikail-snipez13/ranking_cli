@@ -15,6 +15,7 @@ export interface Ranking {
 type Props = {
     pageSetter: any;
     rankingSetter: any;
+    loggedIn: boolean;
 }
 
 type Data = {
@@ -67,20 +68,16 @@ const Search = (props: Props) => {
                         .then(([quest, user]) => {
                             questionCounts.set(ranking.id, quest.length)
                             names.set(ranking.userId, user)
-                            console.log(index);
                             if (index === data.length-1) {
                                 setLoadedMeta(true);
-                                console.log("loaded", index);
                             }
                         })
                         .catch(() => setConnection(false))
                     })
                 }
-                console.log(data);
                 setLoaded(true);
             })
             .catch(() => setConnection(false));
-        console.log();
     }
 
     const handleKeyDown = async (event: KeyboardEvent<HTMLInputElement>) => {
@@ -88,7 +85,14 @@ const Search = (props: Props) => {
             await loadData()
         }
     }
-    const showLogin = () => {props.pageSetter('login')}
+    const showLogin = () => {
+        if (!props.loggedIn) {
+            props.pageSetter('login')
+        }
+        else {
+            props.pageSetter('user-panel')
+        }
+    }
 
     const getQuestion = (id: number) => {return questionCounts.get(id)}
     const getName = (id: number) => {return names.get(id)}
