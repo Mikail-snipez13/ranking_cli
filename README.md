@@ -1,46 +1,16 @@
-# Getting Started with Create React App
+# Ranking Client 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+This service facilitates voting when you create questions that have only one person in the answer. The voting results are used to create a ranking system for each question, providing a clear and objective way to determine the most popular answer.
 
-## Available Scripts
+This service can be used in a variety of settings, such as in surveys, polls, or contests where a single person is being voted on. The system is user-friendly, easy to use, and offers real-time results, which is great for making decisions on the fly.
 
-In the project directory, you can run:
+## System Overview
 
-### `npm start`
+## History
+The service has already been developed and deployed. With a previous version used by a high school to generate teacher rankings for the Abitur newspaper. The application was very insecure and looks terrible. For this reason, the entire application has been renewed and modernized.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Creator 
+Mikail Gündüz is a motivated and driven developer who is currently in an apprenticeship. He is the sole developer behind this service. He has a good experience with web development, specifically with Java and Spring-Boot, and has solid understanding of React.js. He is known for his strong problem-solving skills and ability to quickly adapt to new technologies and programming languages. Despite his limited experience, he took on the task of developing this service and was able to deliver it on time and to a high standard.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+He is a dedicated professional who is always looking for new challenges and opportunities to grow and improve his skills. He is taking the opportunity of apprenticeship to learn more about software development and gain more hands-on experience in the field. He is a quick learner and continuously strives to stay up-to-date with the latest technologies and industry trends. He has a strong understanding of web development best practices and is able to apply them in his work.
