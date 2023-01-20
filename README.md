@@ -5,8 +5,6 @@ This service facilitates voting when you create questions that have only one per
 
 This service can be used in a variety of settings, such as in surveys, polls, or contests where a single person is being voted on. The system is user-friendly, easy to use, and offers real-time results, which is great for making decisions on the fly.
 
-## System Overview
-
 ## History
 The service has already been developed and deployed. With a previous version used by a high school to generate teacher rankings for the Abitur newspaper. The application was very insecure and looks terrible. For this reason, the entire application has been renewed and modernized.
 
