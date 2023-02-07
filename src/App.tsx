@@ -5,7 +5,7 @@ import RankingOverview from './Components/RankingOverview/RankingOverview';
 import Results from './Components/Results/Results';
 import Search, {Ranking} from './Components/Start/Search';
 import UserPanel from './Components/UserPanel/UserPanel';
-import UserPanelRanking from './Components/UserPanelRanking/UserPanelRanking';
+import UserPanelRanking, { Question } from './Components/UserPanelRanking/UserPanelRanking';
 
 export type Credentials = {
   username: string;
@@ -17,6 +17,7 @@ function App() {
   const [page, setPage] = useState<string>("search");
   const [credentials, setCredentials] = useState<Credentials | null>(null);
   const [rankingUser, setRankingUser] = useState<RankingUser | null>(null);
+  const [questions, setQuestions] = useState<Question[] | null>(null); 
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   const [ranking, setRanking] = useState<Ranking>();
 
@@ -40,8 +41,9 @@ function App() {
       credentials={credentials}
       ranking={ranking}
       rankingUser={rankingUser}
+      questions={setQuestions}
       /> : null}
-      {page === "results" ? <Results pageSetter={setPage} /> : null}
+      {page === "results" ? <Results questions={questions} pageSetter={setPage} /> : null}
     </div>
   );
 }

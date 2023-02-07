@@ -1,0 +1,29 @@
+.results-list {
+    display: flex;
+    flex-direction: row;
+    width: 1300px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.results-rank-item {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+@media screen and (max-width: 1300px){
+    .results-list {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .results-rank-item {
+        width: auto !important;
+        flex-grow: 1;
+    }
+}

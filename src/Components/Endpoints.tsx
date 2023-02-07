@@ -2,6 +2,7 @@
 const getHostname = () => {
     let net = window.location;
     return `${net.protocol}//ranking.ddns.net/api`;
+    // return `${net.protocol}//localhost:8080`
 }
 
 // ranking
@@ -25,6 +26,7 @@ export const getQuestions = (rankingId: number) => `${getHostname()}/question/ge
 export const updateQuestion = (questionId: number) => `${getHostname()}/question/update/${questionId}`
 export const deleteQuestion = (questionId: number) => `${getHostname()}/question/delete/${questionId}`
 export const create_question = () => `${getHostname()}/question/create`
+export const get_results = (questionId: number) => `${getHostname()}/question/rank/${questionId}`
 
 // user
 export const getUsernameById = (userId: number) => `${getHostname()}/user/get/usernameById/${userId}`

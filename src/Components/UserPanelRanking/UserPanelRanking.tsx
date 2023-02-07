@@ -11,6 +11,7 @@ type Props = {
     ranking?: Ranking;
     credentials: Credentials | null;
     rankingUser: RankingUser | null;
+    questions: any;
     pageSetter: any;
 }
 
@@ -175,6 +176,11 @@ const UserPanelRanking = (props: Props) => {
         .then(() => {
             load()
         })
+    }
+
+    const showResults = () => {
+        props.questions(questions);
+        props.pageSetter('results')
     }
 
     const validTicketList = validTickets().map(ticket => 
@@ -352,7 +358,7 @@ const UserPanelRanking = (props: Props) => {
                                 <input 
                                 type="button" 
                                 style={{backgroundColor: "transparent", border: "none", fontSize: 24, marginTop: 10}}
-                                onClick={() => alert("doesn't work yet")} value="Results" />
+                                onClick={showResults} value="Results" />
                             </div>
                 </div>
                 
