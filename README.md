@@ -1,4 +1,5 @@
 # Ranking Client 
+[Documentation](https://docs.google.com/document/d/1XJ5hlUzq7pLNjU_yI_55FQbC6QfhC10qQOF62Xb3hlg/edit?usp=sharing)
 
 ## Introduction
 This service facilitates voting when you create questions that have only one person in the answer. The voting results are used to create a ranking system for each question, providing a clear and objective way to determine the most popular answer.
