@@ -1,7 +1,8 @@
 
+
 const getHostname = () => {
     let net = window.location;
-    return `${net.protocol}//ranking.ddns.net/api`;
+    return `https://${process.env.REACT_APP_BACKEND_HOST}`;
     // return `${net.protocol}//localhost:8080`
 }
 
