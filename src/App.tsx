@@ -6,6 +6,7 @@ import Results from './Components/Results/Results';
 import Search, {Ranking} from './Components/Start/Search';
 import UserPanel from './Components/UserPanel/UserPanel';
 import UserPanelRanking, { Question } from './Components/UserPanelRanking/UserPanelRanking';
+import { Analytics } from "@vercel/analytics/react"
 
 export type Credentials = {
   username: string;
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <Analytics />
       {page === "search" ? <Search loggedIn={loggedIn} pageSetter={setPage} rankingSetter={setRanking} /> : null}
       {page === "ranking-overview" ? <RankingOverview pageSetter={setPage} ranking={ranking} /> : null}
       {page === "login" ? 
